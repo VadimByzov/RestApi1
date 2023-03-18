@@ -1,0 +1,5 @@
+# IDE
+/.vs
+
+# Bin
+/code/src/RestApi/bin

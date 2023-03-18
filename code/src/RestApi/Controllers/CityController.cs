@@ -19,11 +19,13 @@ public class CityController : ControllerBase
   }
 
   [HttpGet("")]
-  public async Task<City> GetCities()
+  public async Task<IActionResult> GetCities()
   {
-
     // перечень городов с указанием количества домов
-    return new City { Id = 1, Name = "Saratov" };
+    var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+    var sqlpath = Path.Combine(path, @"sqlscripts/mssql");
+    var files = Directory.GetFiles(sqlpath);
+    return Ok(files);
   }
 
   [HttpGet("{cityId}/streets")]

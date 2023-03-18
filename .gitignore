@@ -1,5 +1,5 @@
 # IDE
-/.vs
+/code/.vs
 
 # Bin
 /code/src/RestApi/bin

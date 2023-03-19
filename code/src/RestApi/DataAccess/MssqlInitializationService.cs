@@ -22,8 +22,7 @@ public class MssqlInitializationService : IDatabaseInitializationService
     CreateDb();
     CreateTables();
 
-    // config variable
-    if (false)
+    if (bool.Parse(_configuration["Settings:FillTestData"]))
     {
       FillTestData();
     }

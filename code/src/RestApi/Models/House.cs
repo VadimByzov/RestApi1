@@ -1,4 +1,4 @@
-﻿namespace RestApi.DataAccess.Models;
+﻿namespace RestApi.Models;
 
 public class House
 {

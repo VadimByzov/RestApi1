@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RestApi.DataAccess;
+using RestApi.Models;
+using RestApi.Services;
 
 namespace RestApi.Controllers;
 
@@ -7,17 +8,24 @@ namespace RestApi.Controllers;
 [ApiController]
 public class CityController : ControllerBase
 {
-  public CityController(ICityDataService cityDataService)
+  public CityController(ICityService cityService)
   {
-    _cityDataService = cityDataService;
+    _cityService = cityService;
   }
 
-  private readonly ICityDataService _cityDataService;
+  private readonly ICityService _cityService;
 
   [HttpGet("")]
   public async Task<IActionResult> GetCities()
   {
-    return Ok(await _cityDataService.GetAll());
+    try
+    {
+      return Ok(await _cityService.GetAll());
+    }
+    catch (Exception e)
+    {
+      return BadRequest(new NotFound { Message = e.Message });
+    }
   }
 
   [HttpGet("{cityId}/streets")]

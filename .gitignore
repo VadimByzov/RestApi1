@@ -3,3 +3,4 @@
 
 # Bin
 /code/src/RestApi/bin
+/code/test/RestApi.xUnitTests/bin/

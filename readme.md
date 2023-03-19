@@ -5,13 +5,16 @@ The api following RESTful principle ...or trying follow. Represents information 
 - MS SQL database
 - Dapper as ORM
 - xUnit for testing
+    - FluentAssertions for easy asserting
 
 ## Contents
+
 - [How to launch](#launch)
 - [Endpoints](#endpoints)
 - [App state](#state)
 
 ## Launch
+
 1. Download project (or fork)
 2. Setting project in appsetting.json
     - In "ConnectionStrings" change "Data source=\<your source\>;..." if you don't use "localhost" by default
@@ -38,7 +41,9 @@ The api following RESTful principle ...or trying follow. Represents information 
 - [x] Data access layer
 - [x] Business layer
 - [x] Controllers layer
-- [ ] Tests
+- [x] Tests
+    - [x] Unit tests
+    - [ ] Integration tests
 - [x] Readme.md
 
 [:arrow_up: Contents](#contents)

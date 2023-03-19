@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApi", "src\RestApi\RestApi.csproj", "{72663841-D8FB-4A14-81B0-B1416557C415}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApi.xUnitTests", "test\RestApi.xUnitTests\RestApi.xUnitTests.csproj", "{F9C43F06-D78A-469A-A268-0FB43C5D1CFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{72663841-D8FB-4A14-81B0-B1416557C415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72663841-D8FB-4A14-81B0-B1416557C415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72663841-D8FB-4A14-81B0-B1416557C415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C43F06-D78A-469A-A268-0FB43C5D1CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C43F06-D78A-469A-A268-0FB43C5D1CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C43F06-D78A-469A-A268-0FB43C5D1CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C43F06-D78A-469A-A268-0FB43C5D1CFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

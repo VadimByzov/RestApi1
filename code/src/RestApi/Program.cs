@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddTransient<IDatabaseInitializationService, MssqlInitializationService>();
+builder.Services.AddTransient<ICityDataService, CityDataService>();
 
 var app = builder.Build();
 

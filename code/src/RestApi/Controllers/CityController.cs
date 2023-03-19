@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestApi.DataAccess;
 
 namespace RestApi.Controllers;
 
@@ -6,26 +7,17 @@ namespace RestApi.Controllers;
 [ApiController]
 public class CityController : ControllerBase
 {
-  public class City
+  public CityController(ICityDataService cityDataService)
   {
-    public int Id { get; set; }
-
-    public string Name { get; set; }
+    _cityDataService = cityDataService;
   }
 
-  public CityController()
-  {
-
-  }
+  private readonly ICityDataService _cityDataService;
 
   [HttpGet("")]
   public async Task<IActionResult> GetCities()
   {
-    // перечень городов с указанием количества домов
-    var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
-    var sqlpath = Path.Combine(path, @"sqlscripts/mssql");
-    var files = Directory.GetFiles(sqlpath);
-    return Ok(files);
+    return Ok(await _cityDataService.GetAll());
   }
 
   [HttpGet("{cityId}/streets")]

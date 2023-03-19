@@ -27,4 +27,10 @@ public class StreetDataService : IStreetDataService
     if (!result.Any()) throw new NotFoundException($"street by id:{id} not found.");
     return result.First();
   }
+
+  public async Task<IEnumerable<Street>> GetByCityId(int cityId)
+  {
+    using var connection = new SqlConnection(_connectionString);
+    return await connection.QueryAsync<Street>("select * from streets where city_id = @cityId", new { cityId });
+  }
 }

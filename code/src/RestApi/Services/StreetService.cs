@@ -19,7 +19,7 @@ public class StreetService : IStreetService
     {
       Id = dataStreet.Id,
       Name = dataStreet.Name,
-      CityId = dataStreet.CityId,
+      CityId = dataStreet.City_Id,
     };
   }
 
@@ -30,7 +30,18 @@ public class StreetService : IStreetService
     {
       Id = s.Id,
       Name = s.Name,
-      CityId = s.CityId,
+      CityId = s.City_Id,
+    });
+  }
+
+  public async Task<IEnumerable<Street>> GetByCityId(int cityId)
+  {
+    var dataStreets = await _streetDataService.GetByCityId(cityId);
+    return dataStreets.Select(s => new Street
+    {
+      Id = s.Id,
+      Name = s.Name,
+      CityId = s.City_Id
     });
   }
 }

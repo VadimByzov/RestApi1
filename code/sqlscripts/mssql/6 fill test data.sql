@@ -1,25 +1,29 @@
-INSERT INTO Cities(id, name) VALUES
-(1, 'Moscow'),
-(2, 'Saint-Peterburg'),
-(3, 'Yaroslavl')
+IF (NOT EXISTS (SELECT * FROM Cities))
+  INSERT INTO Cities(id, name) VALUES
+  (1, 'Moscow'),
+  (2, 'Saint-Peterburg'),
+  (3, 'Yaroslavl')
 
-INSERT INTO Streets(id, name, city_id) VALUES
-(1, 'Puskin st', 1),
-(2, 'Lomonosov st', 1),
-(3, 'Lenin st', 2),
-(4, 'Lermontov st', 2),
-(5, 'Chkalova st', 3)
+IF (NOT EXISTS (SELECT * FROM Streets))
+  INSERT INTO Streets(id, name, city_id) VALUES
+  (1, 'Puskin st', 1),
+  (2, 'Lomonosov st', 1),
+  (3, 'Lenin st', 2),
+  (4, 'Lermontov st', 2),
+  (5, 'Chkalova st', 3)
 
-INSERT INTO Houses(id, number, street_id) VALUES
-(1, '1', 1),
-(2, '2', 1),
-(3, '1', 2),
-(4, '1', 3),
-(5, '2', 3),
-(6, '1', 4),
-(7, '2', 4),
-(8, '1', 5)
+IF (NOT EXISTS (SELECT * FROM Houses))
+  INSERT INTO Houses(id, number, street_id) VALUES
+  (1, '1', 1),
+  (2, '2', 1),
+  (3, '1', 2),
+  (4, '1', 3),
+  (5, '2', 3),
+  (6, '1', 4),
+  (7, '2', 4),
+  (8, '1', 5)
 
+IF (NOT EXISTS (SELECT * FROM Apartments))
 INSERT INTO Apartments(id, area, house_id) VALUES
 (1, 20.50, 1),
 (2, 18.90, 2),

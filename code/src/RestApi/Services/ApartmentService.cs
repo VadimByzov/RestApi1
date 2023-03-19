@@ -19,7 +19,7 @@ public class ApartmentService : IApartmentService
     {
       Id = dataApartment.Id,
       Area = dataApartment.Area,
-      HouseId = dataApartment.HouseId,
+      HouseId = dataApartment.House_Id,
     };
   }
 
@@ -30,7 +30,7 @@ public class ApartmentService : IApartmentService
     {
       Id = a.Id,
       Area = a.Area,
-      HouseId = a.HouseId,
+      HouseId = a.House_Id,
     });
   }
 }

@@ -124,3 +124,4 @@ IF (NOT EXISTS (SELECT * FROM Apartments))
   (55, 30.00, 19),
   (56, 45.50, 19),
   (57, 60.00, 19)
+

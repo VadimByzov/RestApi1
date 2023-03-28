@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RestApi.xUnitTests
-build_property.ProjectDir = C:\Users\qvest\source\sobes\RestApi\code\test\RestApi.xUnitTests\
+build_property.ProjectDir = c:\Users\qvest\source\sobes\RestApi\code\test\RestApi.xUnitTests\

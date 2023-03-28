@@ -1,6 +1,6 @@
 # IDE
-/code/.vs
+code/.vs
 
 # Bin
-/code/src/RestApi/bin
-/code/test/RestApi.xUnitTests/bin/
+code/src/RestApi/bin
+code/test/RestApi.xUnitTests/bin/

@@ -9,11 +9,12 @@ The api following RESTful principle ...or trying follow. Represents information 
 
 ## Contents
 
-- [How to launch](#launch)
+- [How to launch](#how-to-launch)
 - [Endpoints](#endpoints)
-- [App state](#state)
+- [App state](#app-state)
+- [Extra features](#extra-features)
 
-## Launch
+## How to launch
 
 1. Download project (or fork)
 2. Setting project in appsetting.json
@@ -36,7 +37,7 @@ The api following RESTful principle ...or trying follow. Represents information 
 
 [:arrow_up: Contents](#contents)
 
-## State
+## App-state
 
 - [x] Data access layer
 - [x] Business layer
@@ -45,5 +46,11 @@ The api following RESTful principle ...or trying follow. Represents information 
     - [x] Unit tests
     - [ ] Integration tests
 - [x] Readme.md
+
+[:arrow_up: Contents](#contents)
+
+## Extra features
+
+- [ ] Implement crud
 
 [:arrow_up: Contents](#contents)

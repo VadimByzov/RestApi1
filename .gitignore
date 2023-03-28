@@ -1,6 +1,8 @@
-# IDE
-code/.vs
 
-# Bin
-code/src/RestApi/bin
-code/test/RestApi.xUnitTests/bin/
+.vs
+
+*.suo
+*.user
+
+bin
+obj
